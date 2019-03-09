@@ -1,3 +1,15 @@
+@mixin commonFloatTextWidth {
+  float: none;
+  text-align: center;
+  width: 100%;
+}
+
+@mixin commonWidthMargin {
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+
 @media(max-width: 768px) {
   body {}
 
@@ -7,9 +19,7 @@
     #branding,
     nav,
     nav li {
-      float: none;
-      text-align: center;
-      width: 100%;
+      @include commonFloatTextWidth;
     }
   }
 
@@ -24,29 +34,22 @@
     }
 
     form input[type="email"] {
-      width: 100%;
-      margin-bottom: .5rem;
+      @include commonWidthMargin;
     }
 
     h1,
     form {
-      float: none;
-      text-align: center;
-      width: 100%;
+      @include commonFloatTextWidth;
     }
   }
 
   #boxes .box {
-    float: none;
-    text-align: center;
-    width: 100%;
+    @include commonFloatTextWidth;
   }
 
   article#main-col,
   aside#sidebar {
-    float: none;
-    text-align: center;
-    width: 100%;
+    @include commonFloatTextWidth;
   }
 
   .quote {
@@ -56,13 +59,11 @@
     }
 
     input {
-      width: 100%;
-      margin-bottom: .5rem;
+      @include commonWidthMargin;
     }
 
     textarea {
-      width: 100%;
-      margin-bottom: .5rem;
+      @include commonWidthMargin;
     }
 
   }
